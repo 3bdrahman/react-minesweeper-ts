@@ -1,24 +1,16 @@
+@import "../../styles/index.scss";
 .App{
    background: #c2c2c2; 
    padding: 16px;
-//    windows XP styling
-   border-width: 3px;
-   border-style: solid;
-   border-right-color: #999;
-   border-bottom-color:#999 ;
-   border-left-color:#fff ;
-   border-top-color:#fff ;
+    //border styling mixin
+    @include borders(white,#999);
 }
 .Header{
     background-color: #c0c0c0;
     padding: 10px 12px;
-    //    windows XP styling
-    border-width: 3px;
-    border-style: solid;
-    border-right-color: white;
-    border-bottom-color:white ;
-    border-left-color:#7b7b7b ;
-    border-top-color:#7b7b7b ;
+    //border styling mixin
+    @include borders(#7b7b7b,white);
+    
 
     //horizontal 
     display: flex;
@@ -26,28 +18,19 @@
     align-items: center;
 }
 .Body{
+    //border styling mixin
+    @include borders(#7b7b7b,white);
     margin-top: 16px;
-    //    windows XP styling
-    border-width: 3px;
-    border-style: solid;
-    border-right-color: white;
-    border-bottom-color:white ;
-    border-left-color:#7b7b7b ;
-    border-top-color:#7b7b7b ;
     display: grid;
     grid-template-rows: repeat(9,1fr);
     grid-template-columns: repeat(9,1fr);
 }
 .emoji{
+    //border styling mixin
+    @include borders;
     width: 52px;
     height: 52px;
     font-size: 35px;
-    border-width: 3px;
-    border-style: solid;
-    border-right-color: #7b7b7b;
-    border-bottom-color:#7b7b7b ;
-    border-left-color:white ;
-    border-top-color:white ;
     display: flex;
     align-items: center;
     justify-content: center;
