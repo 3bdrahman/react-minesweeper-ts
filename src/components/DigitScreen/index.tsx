@@ -5,7 +5,7 @@ interface DigitScreenProps{
 }
 const DigitScreen: React.FC<DigitScreenProps>=({Value})=> {
   return (
-    <div className='DigitScreen'>{Value.toString().padStart(3,"0")}</div>
+    <div className='DigitScreen'>{Value<0?`-${Math.abs(Value).toString().padStart(2,"0")}` :Value.toString().padStart(3,"0")}</div>
   )
 }
 

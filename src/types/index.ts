@@ -16,3 +16,10 @@ export enum CellState{
      flagged
 }
 export type Cell = {value: CellVal; state: CellState};
+export enum Emoji{
+    smile='🙂',
+    scard = '😨',
+    loss= '🥸',
+    win= '😎'
+
+}

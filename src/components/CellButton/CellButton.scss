@@ -1,6 +1,49 @@
 @import "../../styles/index.scss";
 .CellButton{
+    @include buttons;
     @include borders;
     width: 30px;
     height: 30px;
+    display: flex;
+    justify-content: center;
+
+    &.clicked{
+        border-color: #7b7b7b;
+        border-width: 1px;
+    }
+    span{
+        margin-left: 2px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+    &.value-0{
+      div{
+        display: none;
+      }
+    }
+    &.value-1{
+        color: blue;
+    }
+    &.value-2{
+        color: green;
+    }
+    &.value-3{
+        color: red;
+    }
+    &.value-4{
+        color: purple;
+    }
+    &.value-5{
+        color: maroon;
+    }
+    &.value-6{
+        color: turquoise;
+    }
+    &.value-7{
+        color: black;
+    }
+    &.value-5{
+        color: gray;
+    }
 }
